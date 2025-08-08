@@ -1,6 +1,6 @@
 # SHA-256 FSM (SystemVerilog)
 
-This project implements a simplified SHA-256 hashing algorithm using a finite state machine in SystemVerilog. It is designed to process 512-bit message blocks to compute a 256-bit hash, following the core structure of the SHA-256.
+This project implements a simplified SHA-256 hashing algorithm using a finite state machine in SystemVerilog. It is designed to process 512-bit message blocks to compute a 256-bit hash.
 
 ## Features
 
