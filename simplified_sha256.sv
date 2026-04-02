@@ -7,8 +7,10 @@ module simplified_sha256 #(parameter integer NUM_OF_WORDS = 20)(
 	output logic [31:0] mem_write_data
 );
 
+/* state variables */
 enum logic [2:0] {IDLE, WAIT, READ, BLOCK, COMPUTE, WRITE} state;
 
+/* internal signals */
 logic [31:0] w[16];
 logic [31:0] message[32];
 logic [31:0] h0, h1, h2, h3, h4, h5, h6, h7;
@@ -21,6 +23,7 @@ logic [15:0] cur_addr;
 logic [31:0] cur_write_data;
 logic [31:0] s1, s0;
 
+/* k constants used in every SHA-256 hash round */
 parameter int k[0:63] = '{
    32'h428a2f98,32'h71374491,32'hb5c0fbcf,32'he9b5dba5,32'h3956c25b,32'h59f111f1,32'h923f82a4,32'hab1c5ed5,
    32'hd807aa98,32'h12835b01,32'h243185be,32'h550c7dc3,32'h72be5d74,32'h80deb1fe,32'h9bdc06a7,32'hc19bf174,
@@ -32,7 +35,7 @@ parameter int k[0:63] = '{
    32'h748f82ee,32'h78a5636f,32'h84c87814,32'h8cc70208,32'h90befffa,32'ha4506ceb,32'hbef9a3f7,32'hc67178f2
 };
 
-
+/* compute how many 512-bit blocks make up the input data */
 function logic [15:0] determine_num_blocks(input logic [31:0] size);
 	begin
 		determine_num_blocks = (size + 15) / 16;
@@ -41,9 +44,10 @@ endfunction
 
 assign num_blocks = determine_num_blocks(NUM_OF_WORDS); 
 
+/* SHA-256 hash ronud (completed in a single cycle) */
 function logic [255:0] sha256_op(input logic [31:0] a, b, c, d, e, f, g, h, w,
                                  input logic [7:0] t);
-    logic [31:0] S1, S0, ch, maj, t1, t2; // internal signals
+    logic [31:0] S1, S0, ch, maj, t1, t2;
 begin
     S1 = rightrotate(e, 6) ^ rightrotate(e, 11) ^ rightrotate(e, 25);
     ch = (e & f) ^ ((~e) & g);
@@ -62,6 +66,7 @@ assign mem_we = cur_we;
 assign mem_write_data = cur_write_data;
 
 
+/* right rotate x by r elements */
 function logic [31:0] rightrotate(input logic [31:0] x,
                                   input logic [ 7:0] r);
    rightrotate = (x >> r) | (x << (32 - r));
@@ -73,17 +78,19 @@ function logic [31:0] expansion;
 	expansion = w[0] + s0 + w[9] + s1;	
 endfunction
 
-
+/* read data from memory, create 512-bit blocks, and process them */
 always_ff @(posedge clk, negedge reset_n)
 	begin
   	if (!reset_n) begin
     	cur_we <= 1'b0;
 		state <= IDLE;
   	end 
-  	else 
+  	else
   		case (state)
+		
+			/* initialize hash constants & other variables */
     		IDLE: begin 
-       			if(start) begin
+       		if(start) begin
 					h0 <= 32'h6a09e667;  
 					h1 <= 32'hbb67ae85;
 					h2 <= 32'h3c6ef372;
@@ -115,6 +122,7 @@ always_ff @(posedge clk, negedge reset_n)
 				state <= READ;
 			end
 
+			/* obtain input message from MEMORY */
 			READ: begin 
 				if(offset < 20) begin
 					message[offset] <= mem_read_data;
@@ -123,6 +131,8 @@ always_ff @(posedge clk, negedge reset_n)
 					offset <= offset + 1'b1;
 					state <= WAIT;
 				end
+				
+				/* format last block by including padding and size */
 				else begin
 					message[20] <= 32'h80000000;
 					message[31] <= 32'd640;
@@ -131,10 +141,12 @@ always_ff @(posedge clk, negedge reset_n)
 					state <= BLOCK;
 				end
 			end
-	 
-
+			
+			/* allocate 512-bit block to be processed */
 			BLOCK: begin
 				if(j < num_blocks) begin
+				
+					/* isolate blocks into w[] array */
 					for(i=0; i<16; i++) begin
 						if(j == 0)
 							w[i] <= message[i];
@@ -145,6 +157,8 @@ always_ff @(posedge clk, negedge reset_n)
 					i <= 0;
 					state <= COMPUTE;
 				end
+				
+				/* no input data blocks remaining */
 				else begin 
 					state <= WRITE;
 					offset<=0;
@@ -154,7 +168,10 @@ always_ff @(posedge clk, negedge reset_n)
 			end
 
 
+			/* perform word expansion and hash round, 64 times */
 			COMPUTE: begin
+			
+				/* word expansion and hash round done a single cycle */
 				if (tem < 64) begin
 					for (int n = 0; n < 15; n++) 
 						w[n] <= w[n+1];
@@ -162,7 +179,9 @@ always_ff @(posedge clk, negedge reset_n)
 					{a, b, c, d, e, f, g, h} <= sha256_op(a, b, c, d, e, f, g, h, w[0], tem);
 					tem <= tem + 1'b1;
 					state <= COMPUTE;
-				end 
+				end
+				
+				/* 64 hash rounds complete. Update A-H and hash constants */
 				else begin
 					h0 <= a + h0;
 					h1 <= b + h1;
@@ -182,11 +201,14 @@ always_ff @(posedge clk, negedge reset_n)
 					h <= h + h7;
 					i <= 0;
 					tem <= 0;
+					
+					/* obtain the next 512-bit block from input data */
 					state <= BLOCK;
 				end
 			end
-	 
-
+			
+			
+			/* asynchronous write to memory */
 			WRITE: begin
 					cur_addr <= output_addr;
 					if(i < 8) begin
@@ -204,10 +226,12 @@ always_ff @(posedge clk, negedge reset_n)
 						offset <= i;
 						state <= WRITE;
 					end
-					else 
+					
+					/* 256-bit hash generated and written to memory */
+					else
 						state <= IDLE;
 			end
-   		endcase
+   	endcase
 	end
 
 assign done = (state == IDLE);
