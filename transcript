@@ -1,10 +1,7 @@
-# Compile of simplified_sha256.sv failed with 1 errors.
-# Compile of tb_simplified_sha256.sv was successful.
-# 2 compiles, 1 failed with 1 error.
 # Compile of simplified_sha256.sv was successful.
 vsim -gui work.tb_simplified_sha256
 # vsim -gui work.tb_simplified_sha256 
-# Start time: 18:01:16 on Apr 01,2026
+# Start time: 18:34:33 on Apr 01,2026
 # Loading sv_std.std
 # Loading work.tb_simplified_sha256
 # Loading work.simplified_sha256
@@ -215,134 +212,6 @@ run -all
 # Reading from mem[0] = 01234567
 # Reading from mem[0] = 01234567
 # Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
-# Reading from mem[0] = 01234567
 # ---------------------
 # COMPARE HASH RESULTS:
 # ---------------------
@@ -358,14 +227,13 @@ run -all
 # 
 # CONGRATULATIONS! All your hash results are correct!
 # 
-# Total number of cycles:         315
+# Total number of cycles:         187
 # 
 # 
 # ***************************
 # 
 # ** Note: $stop    : C:/Users/cyroc/Documents/projects/SHA-256/tb_simplified_sha256.sv(262)
-#    Time: 6350 ps  Iteration: 2  Instance: /tb_simplified_sha256
+#    Time: 3790 ps  Iteration: 2  Instance: /tb_simplified_sha256
 # Break in Module tb_simplified_sha256 at C:/Users/cyroc/Documents/projects/SHA-256/tb_simplified_sha256.sv line 262
-quit
-# End time: 18:02:03 on Apr 01,2026, Elapsed time: 0:00:47
-# Errors: 0, Warnings: 6
+# End time: 18:35:05 on Apr 01,2026, Elapsed time: 0:00:32
+# Errors: 0, Warnings: 2
