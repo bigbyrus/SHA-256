@@ -1,0 +1,371 @@
+# Compile of simplified_sha256.sv failed with 1 errors.
+# Compile of tb_simplified_sha256.sv was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of simplified_sha256.sv was successful.
+vsim -gui work.tb_simplified_sha256
+# vsim -gui work.tb_simplified_sha256 
+# Start time: 18:01:16 on Apr 01,2026
+# Loading sv_std.std
+# Loading work.tb_simplified_sha256
+# Loading work.simplified_sha256
+run -all
+# Reading from mem[x] = xxxxxxxx
+# Reading from mem[x] = xxxxxxxx
+# Reading from mem[x] = xxxxxxxx
+# Reading from mem[x] = xxxxxxxx
+# Reading from mem[x] = xxxxxxxx
+# --------
+# MESSAGE:
+# --------
+# 01234567
+# 02468ace
+# 048d159c
+# 091a2b38
+# 12345670
+# 2468ace0
+# 48d159c0
+# 91a2b380
+# 23456701
+# 468ace02
+# 8d159c04
+# 1a2b3809
+# 34567012
+# 68ace024
+# d159c048
+# a2b38091
+# 45670123
+# 8ace0246
+# 159c048d
+# 00000000
+# ***************************
+# 
+# Reading from mem[x] = xxxxxxxx
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[1] = 02468ace
+# Reading from mem[1] = 02468ace
+# Reading from mem[2] = 048d159c
+# Reading from mem[2] = 048d159c
+# Reading from mem[3] = 091a2b38
+# Reading from mem[3] = 091a2b38
+# Reading from mem[4] = 12345670
+# Reading from mem[4] = 12345670
+# Reading from mem[5] = 2468ace0
+# Reading from mem[5] = 2468ace0
+# Reading from mem[6] = 48d159c0
+# Reading from mem[6] = 48d159c0
+# Reading from mem[7] = 91a2b380
+# Reading from mem[7] = 91a2b380
+# Reading from mem[8] = 23456701
+# Reading from mem[8] = 23456701
+# Reading from mem[9] = 468ace02
+# Reading from mem[9] = 468ace02
+# Reading from mem[10] = 8d159c04
+# Reading from mem[10] = 8d159c04
+# Reading from mem[11] = 1a2b3809
+# Reading from mem[11] = 1a2b3809
+# Reading from mem[12] = 34567012
+# Reading from mem[12] = 34567012
+# Reading from mem[13] = 68ace024
+# Reading from mem[13] = 68ace024
+# Reading from mem[14] = d159c048
+# Reading from mem[14] = d159c048
+# Reading from mem[15] = a2b38091
+# Reading from mem[15] = a2b38091
+# Reading from mem[16] = 45670123
+# Reading from mem[16] = 45670123
+# Reading from mem[17] = 8ace0246
+# Reading from mem[17] = 8ace0246
+# Reading from mem[18] = 159c048d
+# Reading from mem[18] = 159c048d
+# Reading from mem[19] = 00000000
+# Reading from mem[19] = 00000000
+# Reading from mem[20] = xxxxxxxx
+# Reading from mem[20] = xxxxxxxx
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# Reading from mem[0] = 01234567
+# ---------------------
+# COMPARE HASH RESULTS:
+# ---------------------
+# Correct H[0] = bdd2fbd9	Your H[0] = bdd2fbd9
+# Correct H[1] = 42623974	Your H[1] = 42623974
+# Correct H[2] = bf129635	Your H[2] = bf129635
+# Correct H[3] = 937c5107	Your H[3] = 937c5107
+# Correct H[4] = f09b6e9e	Your H[4] = f09b6e9e
+# Correct H[5] = 708eb28b	Your H[5] = 708eb28b
+# Correct H[6] = 0318d121	Your H[6] = 0318d121
+# Correct H[7] = 85eca921	Your H[7] = 85eca921
+# ***************************
+# 
+# CONGRATULATIONS! All your hash results are correct!
+# 
+# Total number of cycles:         315
+# 
+# 
+# ***************************
+# 
+# ** Note: $stop    : C:/Users/cyroc/Documents/projects/SHA-256/tb_simplified_sha256.sv(262)
+#    Time: 6350 ps  Iteration: 2  Instance: /tb_simplified_sha256
+# Break in Module tb_simplified_sha256 at C:/Users/cyroc/Documents/projects/SHA-256/tb_simplified_sha256.sv line 262
+quit
+# End time: 18:02:03 on Apr 01,2026, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 6

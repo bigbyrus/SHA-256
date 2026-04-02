@@ -35,7 +35,7 @@ In the first working version of the SHA-256, I constructed a straightforward app
     ; 152.74 MHz ; 152.74 MHz      ; clk        ;      ;
     +------------+-----------------+------------+------+
 
-<p align="center">
+<p>
   <img src="assets/sha-res.png" width="600">
 </p>
 
@@ -49,14 +49,14 @@ In an attempt to improve the throughput of my design, I pipelined the SHA-256 op
     Total registers : 2528
 
     +-------------------------------------------------+
-    ; Slow 900mV -40C Model Fmax Summary              ;
+    ; Slow 900mV 100C Model Fmax Summary              ;
     +-----------+-----------------+------------+------+
     ; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
     +-----------+-----------------+------------+------+
     ; 206.4 MHz ; 206.4 MHz       ; clk        ;      ;
     +-----------+-----------------+------------+------+
 
-<p align="center">
+<p>
   <img src="assets/pipe-res.png" width="600">
 </p>
 
